@@ -7,9 +7,9 @@ function Nav() {
         <>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <div className="nav-banner-img">
+                    <Link to="/" className="nav-banner-img">
                         <img src={logo} alt="logo" className='nav-logo-image' />
-                    </div>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"><img src={menu} className='menu-bar' alt="menubar" /></span>
                     </button>
@@ -26,7 +26,7 @@ function Nav() {
                             </li>
                         </ul>
                         <div className="d-flex login-box">
-                            <Link to="/signin" type='button' className='btn btn-outline-light'>login / register</Link>
+                            <Link to="/signin" type='button' className='btn btn-outline-light login-nav-btn'>login / register</Link>
                         </div>
                     </div>
                 </div>

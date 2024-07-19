@@ -11,8 +11,8 @@ function Banner() {
                     <h2>Netflix</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae asperiores qui provident facilis? Fuga itaque fugit error suscipit beatae numquam?</p>
                     <div className="banner-button">
-                        <button type='button' className='btn btn-light more-btn'>More</button>
-                        <button type='button' className='btn btn-outline-light'>watch Trailer</button>
+                        <button type='button' className='btn btn-light more-btn login-nav-btn'>More</button>
+                        <button type='button' className='btn btn-outline-light login-nav-btn'>watch Trailer</button>
                     </div>
                 </div>
             </div>

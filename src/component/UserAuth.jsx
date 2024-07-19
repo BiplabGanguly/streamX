@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import SignInBox from '../Containers/SignInBox';
+import SignUpBox from '../Containers/SignUpBox';
 
 function UserAuth() {
     const location = useLocation();
@@ -8,11 +10,19 @@ function UserAuth() {
 
     return (
         <>
-            {
-                isLogin ? <h2>Sign In</h2> :
-                    isRegister ? <h2>Sign Up</h2> :
-                        <h2>wrong</h2>
-            }
+            <div className="container-fluid authbox">
+                <div className="row siniin">
+                    {
+                        isLogin ? <SignInBox data="sign in" /> :
+                            isRegister ? <SignUpBox data="sign up" /> :
+                                <h2>wrong</h2>
+                    }
+                </div>
+            </div>
+
+
+
+
 
         </>
     )

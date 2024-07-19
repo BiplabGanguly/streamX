@@ -40,11 +40,25 @@ body {
 
 .navbar {
     z-index: 1;
-    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 8px black;
 }
 
 .login-box {
     margin-right: 3rem;
+}
+
+.login-nav-btn:focus,
+.login-nav-btn:active {
+    box-shadow: none;
+    outline: none;
+}
+
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    box-shadow: none;
+    outline: none;
 }
 
 /* banner............................................................*/
@@ -63,7 +77,7 @@ body {
 
 .bannertext {
     position: relative;
-    bottom: 300px;
+    bottom: 320px;
     color: white;
     width: 50%;
     left: 120px;
@@ -86,8 +100,135 @@ body {
 }
 
 
+/* authbox....................................................... */
+
+.authbox {
+    position: absolute;
+    top: 0;
+    background: url(./assets/authimg.jpg);
+    background-size: cover;
+    height: 44rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
+.sigininbox {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    height: 20rem;
+    width: 22rem;
+    display: flex;
+    padding: 1.2rem;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 0 0 5px white;
+}
+
+.sigininbox input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding-left: 2rem;
+    color: white;
+    outline: none;
+}
+
+.sigininbox input:focus,
+.sigininbox input:active {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+
+.sigininbox button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.sigininbox button:focus,
+.sigininbox button:active {
+    box-shadow: none;
+    outline: none;
+}
+
+
+.sigininbox span {
+    color: white;
+}
+
+.sigininbox .signuplink {
+    color: white;
+    text-decoration: none;
+}
+
+
+.link-signup {
+    text-align: center;
+}
+
+
+
+.signupbox {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    height: 26rem;
+    width: 22rem;
+    display: flex;
+    padding: 1.2rem;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 0 0 5px white;
+}
+
+
+.signupbox input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    padding-left: 2rem;
+    color: white;
+    outline: none;
+}
+
+.signupbox input:focus,
+.signupbox input:active {
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+
+.signupbox button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.signupbox button:focus,
+.signupbox button:active {
+    box-shadow: none;
+    outline: none;
+}
+
+
+.signupbox span {
+    color: white;
+}
+
+.signupbox .signuplink {
+    color: white;
+    text-decoration: none;
+}
 
 
 /* toast................................................................. */
@@ -141,6 +282,31 @@ body {
 
     .bannertext {
         display: none;
+    }
+
+    .sigininbox {
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        height: 20rem;
+        width: 22rem;
+        display: flex;
+        padding: 1.2rem;
+        border-radius: 20px;
+        flex-direction: column;
+        box-shadow: 0 0 5px white;
+    }
+
+
+    .signupbox {
+        background-color: transparent;
+        backdrop-filter: blur(5px);
+        height: 26rem;
+        width: 22rem;
+        display: flex;
+        padding: 1.2rem;
+        border-radius: 20px;
+        flex-direction: column;
+        box-shadow: 0 0 5px white;
     }
 
 }
