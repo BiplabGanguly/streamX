@@ -1,12 +1,13 @@
 import React from 'react'
 import logo from '../assets/logo2.png'
 import menu from '../assets/Menu.png'
+import { Link } from 'react-router-dom'
 function Nav() {
     return (
         <>
             <nav className="navbar navbar-expand-lg">
                 <div className="container-fluid">
-                    <div className="banner-img">
+                    <div className="nav-banner-img">
                         <img src={logo} alt="logo" className='nav-logo-image' />
                     </div>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,9 +25,9 @@ function Nav() {
                                 <a className="nav-link" href="#">Series</a>
                             </li>
                         </ul>
-                        <form className="d-flex search-box">
-                            <input className="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search" />
-                        </form>
+                        <div className="d-flex login-box">
+                            <Link to="/signin" type='button' className='btn btn-outline-light'>login / register</Link>
+                        </div>
                     </div>
                 </div>
             </nav>

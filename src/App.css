@@ -1,11 +1,11 @@
-/* body */
+/* body..................................................... */
 body {
-    background-color: black;
+    background: black;
     font-family: URW Chancery L, cursive;
 }
 
 
-/* navbar */
+/* navbar...................................................... */
 
 .nav-logo-image {
     width: 16rem;
@@ -27,14 +27,10 @@ body {
     color: white;
 }
 
-.banner-img {
+.nav-banner-img {
     width: 10rem;
     height: 4rem;
     margin-left: 5rem;
-}
-
-.navbar-toggler:focus {
-    display: none;
 }
 
 .menu-bar {
@@ -42,32 +38,69 @@ body {
     max-height: 100%;
 }
 
-.search-box {
-    margin-right: 2rem;
-    outline: none;
+.navbar {
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
 }
 
+.login-box {
+    margin-right: 3rem;
+}
 
-.search-box .search-bar {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white;
-    padding-left: 2rem;
-    width: 20rem;
+/* banner............................................................*/
+
+.banner-box {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+
+}
+
+.banner-box-img {
+    width: 100%;
+    height: 100%;
+}
+
+.bannertext {
+    position: relative;
+    bottom: 300px;
     color: white;
-    outline: none;
-}
-
-.search-box .search-bar:focus {
-    border: none;
-    text-decoration: none;
-    outline: none;
+    width: 50%;
+    left: 120px;
 }
 
 
+.bannertext h2 {
+    font-size: 5rem;
+    margin-bottom: 2.4rem;
+}
+
+.bannertext p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.banner-button {
+    display: flex;
+    gap: 2rem;
+}
 
 
-/* media for 992 */
+
+
+
+
+/* toast................................................................. */
+
+.toast {
+    z-index: 12;
+}
+
+
+
+
+
+/* media for 992......................................................... */
 
 @media (max-width: 992px) {
     .nav-logo-image {
@@ -77,15 +110,20 @@ body {
         top: -54px;
     }
 
-    .search-box .search-bar {
+
+    .bannertext {
         display: none;
     }
+
 }
 
 
 
-/* media for 600 */
+
+
+/* media for 600................................................................................. */
 @media (max-width: 600px) {
+
     .nav-logo-image {
         width: 12rem;
         position: absolute;
@@ -93,7 +131,16 @@ body {
         top: -47px
     }
 
-    .search-box .search-bar {
+    .banner-box {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .bannertext {
         display: none;
     }
+
 }
