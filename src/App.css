@@ -7,6 +7,28 @@ body {
 
 /* navbar...................................................... */
 
+.user_email {
+    color: white;
+}
+
+
+.nav-drop button,
+.nav-drop button:hover,
+.nav-drop button:checked {
+    background-color: transparent;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.nav-drop-menu,
+.nav-drop-menu .nav-drop-item,
+.nav-drop-menu .nav-drop-item:hover {
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+}
+
 .nav-logo-image {
     width: 16rem;
     position: absolute;
@@ -178,12 +200,13 @@ body {
 .signupbox {
     background: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(5px);
-    height: 26rem;
-    width: 22rem;
+    height: 33em;
+    width: 24rem;
     display: flex;
     padding: 1.2rem;
     border-radius: 20px;
     flex-direction: column;
+    margin-top: 5rem;
     box-shadow: 0 0 5px white;
 }
 
@@ -228,6 +251,12 @@ body {
 .signupbox .signuplink {
     color: white;
     text-decoration: none;
+}
+
+.signupbox p {
+    color: rgb(231, 228, 228);
+    font-size: .8rem;
+    height: .2rem;
 }
 
 
@@ -300,8 +329,8 @@ body {
     .signupbox {
         background-color: transparent;
         backdrop-filter: blur(5px);
-        height: 26rem;
-        width: 22rem;
+        height: 33rem;
+        width: 24rem;
         display: flex;
         padding: 1.2rem;
         border-radius: 20px;

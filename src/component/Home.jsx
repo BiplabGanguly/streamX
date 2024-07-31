@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Banner from '../Containers/Banner';
 
-
 function Home() {
+
     return (
         <>
             <Banner />
@@ -11,3 +11,4 @@ function Home() {
 }
 
 export default Home;
+

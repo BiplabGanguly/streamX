@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import logo from '../assets/logo2.png'
 import menu from '../assets/Menu.png'
 import { Link } from 'react-router-dom'
-function Nav() {
+function Nav({ useremail }) {
+
+    const signout_function = () => {
+        sessionStorage.clear();
+        window.location.reload();
+    }
+
     return (
         <>
             <nav className="navbar navbar-expand-lg">
@@ -26,7 +32,17 @@ function Nav() {
                             </li>
                         </ul>
                         <div className="d-flex login-box">
-                            <Link to="/signin" type='button' className='btn btn-outline-light login-nav-btn'>login / register</Link>
+                            {
+                                useremail ? <div class="dropdown nav-drop">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {useremail}
+                                    </button>
+                                    <ul class="dropdown-menu nav-drop-menu">
+                                        <li><a class="dropdown-item nav-drop-item" onClick={signout_function}>Signout</a></li>
+                                    </ul>
+                                </div> : <Link to="/signin" type='button' className='btn btn-outline-light login-nav-btn'>login / register</Link>
+                            }
+
                         </div>
                     </div>
                 </div>
